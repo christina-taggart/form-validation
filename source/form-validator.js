@@ -2,6 +2,7 @@
 $(function(){
   //Your code...
   $('form').on('submit', function(event) {
+    clearErrors()
     event.preventDefault();
     var email = $(this).find("input[name='email']").val()
     var password = $(this).find("input[name='password']").val()
@@ -32,6 +33,10 @@ $(function(){
  //    If any of the above conditions are false
  //    - The form is not allowed to be submitted
  //    - Error messages are dislpayed
+
+var clearErrors = function(){
+  $('#errors').empty()
+}
 
 var appendError = function(message) {
   $('#errors').append(message)
