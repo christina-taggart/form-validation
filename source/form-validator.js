@@ -6,9 +6,9 @@ $(function(){
 
     var validEmail = emailPattern.test(document.getElementById('email').value)
     if(validEmail){
-      alert('This worked')
+
     } else {
-      alert('Email invalid')
+      $('#errors').append("<li>Please enter a valid email</li>")
     }
     var passwordCapital = new RegExp ("[A-Z]")
     var passwordNumeric = new RegExp ("[0-9]")
@@ -16,19 +16,19 @@ $(function(){
     var validNumeric = passwordNumeric.test(document.getElementById('password').value)
     var validLength = document.getElementById('password').value.length >= 8
     if(validCapital){
-      alert('Valid Capital')
+
     } else {
-      alert('Invalid Capital')
+      $('#errors').append("<li>Your password needs a capital letter</li>")
     }
     if(validNumeric){
-      alert('Valid Number')
+
     } else {
-      alert('Invalid Number')
+      $('#errors').append("<li>Your password needs to contain a number</li>")
     }
     if(validLength){
-      alert('Valid Length')
+
     } else {
-      alert('Invalid Length')
+      $('#errors').append("<li>Your password needs to have at least 8 characters</li>")
     }
   })
 
