@@ -22,3 +22,18 @@ $(function(){
     var emailText = new RegExp(/.+@.+\..{2,}/)
     return emailText.test(email)
  }
+
+ var passwordLengthTester = function(password) {
+  var passwordLengthText = new RegExp(/.{8,}/)
+  return passwordLengthText.test(password)
+ }
+
+ var passwordCapitalTester = function(password) {
+  var passwordCapitalText = new RegExp(/[A-Z]/)
+  return passwordCapitalText.test(password)
+ }
+
+ var passwordNumberTester = function(password) {
+  var passwordNumberText = new RegExp(/\d/)
+  return passwordNumberText.test(password)
+ }
